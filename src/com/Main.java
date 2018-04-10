@@ -1,4 +1,4 @@
-package sample;
+package com;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -10,10 +10,13 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
-        primaryStage.setTitle("Hello World");
+        Parent root = FXMLLoader.load(getClass().getResource("menu.fxml"));
+
+        primaryStage.setTitle("Electromaze");
+
         primaryStage.setScene(new Scene(root, 1024, 768));
         primaryStage.show();
+
     }
 
 
