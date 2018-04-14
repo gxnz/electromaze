@@ -52,6 +52,10 @@ public class menuController {
         window.show();
     }
 
+    public void LoadMultiPlayer(ActionEvent event) throws IOException {
+    //movement.start();
+    }
+
     public void ShowHighScores (ActionEvent event){
        HighScores.setVisible(true);
        StoryButton.setDisable(true);
