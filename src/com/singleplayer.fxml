@@ -9,17 +9,13 @@
    <children>
       <ImageView fitHeight="768.0" fitWidth="1024.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../resources/map1.png" />
+            <Image url="@../resources/levels.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="Paused" fitHeight="768.0" fitWidth="1024.0" pickOnBounds="true" preserveRatio="true" visible="false">
-         <image>
-            <Image url="@../resources/paused.png" />
-         </image>
-      </ImageView>
-      <Button fx:id="Pause" layoutX="841.0" layoutY="18.0" mnemonicParsing="false" onAction="#EscapePressed" opacity="0.0" prefHeight="46.0" prefWidth="165.0" text="Pause" />
-      <Button fx:id="Resume" disable="true" layoutX="452.0" layoutY="353.0" mnemonicParsing="false" onAction="#ResumePressed" opacity="0.0" prefHeight="13.0" prefWidth="120.0" text="Resume" />
-      <Button fx:id="Return" disable="true" layoutX="452.0" layoutY="392.0" mnemonicParsing="false" onAction="#LoadMenu" opacity="0.0" prefHeight="39.0" prefWidth="120.0" text="Return" />
-      <Button fx:id="Exit" disable="true" layoutX="460.0" layoutY="431.0" mnemonicParsing="false" onAction="#ExitPressed" opacity="0.0" prefHeight="23.0" prefWidth="104.0" text="Exit" />
+      <Button fx:id="Return" layoutX="827.0" layoutY="700.0" mnemonicParsing="false" onAction="#LoadMenu" opacity="0.0" prefHeight="44.0" prefWidth="170.0" text="Return" />
+      <Button layoutX="8.0" layoutY="14.0" mnemonicParsing="false" onAction="#LoadLevel1" opacity="0.0" prefHeight="739.0" prefWidth="229.0" text="Level1" />
+      <Button layoutX="270.0" layoutY="24.0" mnemonicParsing="false" onAction="#LoadLevel2" opacity="0.0" prefHeight="728.0" prefWidth="229.0" text="Level2" />
+      <Button layoutX="527.0" layoutY="24.0" mnemonicParsing="false" onAction="#LoadLevel3" opacity="0.0" prefHeight="728.0" prefWidth="229.0" text="Level3" />
+      <Button layoutX="785.0" layoutY="24.0" mnemonicParsing="false" onAction="#LoadLevel4" opacity="0.0" prefHeight="652.0" prefWidth="220.0" text="Level4" />
    </children>
 </AnchorPane>

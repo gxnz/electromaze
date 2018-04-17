@@ -1,5 +1,10 @@
 package com;
 
+
+import com.levelone.Level1;
+import com.leveltwo.Level2;
+import com.levelthree.Level3;
+import com.levelfour.Level4;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
@@ -7,37 +12,43 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
 import javafx.fxml.FXML;
-import javafx.scene.image.ImageView;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class singleplayerController {
+public class singleplayerController extends IOException {
 
     private AnchorPane rootPane;
-    @FXML public ImageView Paused;
-    @FXML public Button Pause;
-    @FXML public Button Resume;
-    @FXML public Button Return;
-    @FXML public Button Exit;
 
-    public void EscapePressed(){
-        //System.out.println("Click!");
-        Paused.setVisible(true);
-        Pause.setDisable(true);
-        Resume.setDisable(false);
-        Return.setDisable(false);
-        Exit.setDisable(false);
+    @FXML public Button Return;
+
+    public void LoadLevel1(ActionEvent event) {
+
+        //String string[];
+        //Stage Stage2 = new Stage();
+
+        Level1 Level1 = new Level1();
+        Level1.start(new Stage());
+
+        //Stage2.setScene(new Scene(newPane));
+        //System.out.println("call");
+        //  } catch (Exception e){
+        //Main2 startUpTest = Main2.waitForStartUpTest();
+        //startUpTest.printSomething();
     }
 
-    public void ResumePressed(){
-        //System.out.println("Click!");
-        Paused.setVisible(false);
-        Pause.setDisable(false);
-        Resume.setDisable(true);
-        Return.setDisable(true);
-        Exit.setDisable(true);
+    public void LoadLevel2(ActionEvent event) throws IOException {
+        Level2 Level2 = new Level2();
+        Level2.start(new Stage());
+    }
+    public void LoadLevel3(ActionEvent event) throws IOException {
+        Level3 Level3 = new Level3();
+        Level3.start(new Stage());
+    }
+    public void LoadLevel4(ActionEvent event) throws IOException {
+        Level4 Level4 = new Level4();
+        Level4.start(new Stage());
     }
 
     public void LoadMenu(ActionEvent event) throws IOException {

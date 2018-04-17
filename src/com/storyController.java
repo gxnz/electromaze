@@ -1,20 +1,31 @@
 package com;
 
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.fxml.FXML;
 import javafx.scene.image.ImageView;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
 
+import java.awt.event.KeyAdapter;
+
+
+import java.awt.event.KeyListener;
 import java.io.IOException;
 
+
+
 public class storyController {
+
+
 
     private AnchorPane rootPane;
 
@@ -31,6 +42,11 @@ public class storyController {
     @FXML public Button Exit;
 
     int currentimage = 1;
+
+
+
+
+
 
     public void NextClicked(){
         //System.out.println("Click!");
@@ -68,7 +84,8 @@ public class storyController {
         }
     }
 
-    public void EscapePressed(){
+
+        public void EscapePressed(){
         //System.out.println("Click!");
         Paused.setVisible(true);
         Pause.setDisable(true);

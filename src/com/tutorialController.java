@@ -55,6 +55,14 @@ public class tutorialController {
         else if (currentimage == 5) {
             imgView.setImage(new Image("resources/tutorial6.png"));
             currentimage = 6;
+        }
+        else if (currentimage == 6) {
+                imgView.setImage(new Image("resources/tutorial7.png"));
+                currentimage = 7;
+            }
+            else if (currentimage == 7) {
+                imgView.setImage(new Image("resources/tutorial8.png"));
+                currentimage = 8;
             Next.setDisable(true);
         }
     }
@@ -79,8 +87,16 @@ public class tutorialController {
         }
         if (currentimage == 6) {
             imgView.setImage(new Image("resources/tutorial5.png"));
-            Next.setDisable(false);
             currentimage = 5;
+        }
+        if (currentimage == 7) {
+            imgView.setImage(new Image("resources/tutorial6.png"));
+            currentimage = 6;
+        }
+        if (currentimage == 8) {
+            imgView.setImage(new Image("resources/tutorial7.png"));
+            currentimage = 7;
+            Next.setDisable(false);
         }
     }
 

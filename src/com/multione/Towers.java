@@ -1,0 +1,26 @@
+package com.multione;
+import javafx.scene.Group;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+import javafx.scene.input.KeyCode;
+import javafx.scene.layout.Pane;
+import javafx.scene.shape.Rectangle;
+import com.multione.Multi1;
+
+public class Towers extends Multi1 {
+
+    Pane myTowers;
+    //Creates signal towers
+    public Pane getTowers(String src, int x, int y, int sizeWidth, int sizeHeight) {
+        Image image = new Image(src);
+        ImageView pImage = new ImageView(image);
+        pImage.setFitWidth(sizeWidth);
+        pImage.setFitHeight(sizeHeight);
+        Pane Towers = new Pane();
+        Towers.getChildren().addAll(new Rectangle(sizeWidth, sizeHeight), pImage);
+        Towers.setTranslateY(y);
+        Towers.setTranslateX(x);
+        myTowers = Towers;
+        return Towers;
+    }
+}

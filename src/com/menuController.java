@@ -1,6 +1,11 @@
 package com;
 
+
+import com.levelone.Level1;
+import com.multione.Multi1;
+import com.multitwo.Multi2;
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import java.io.IOException;
@@ -10,12 +15,16 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.image.ImageView;
 import javafx.scene.control.Button;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
+
+
 
 public class menuController {
 
     private AnchorPane rootPane;
+    private AnchorPane newPane;
     @FXML public ImageView HighScores;
     @FXML public Button StoryButton;
     @FXML public Button TutorialButton;
@@ -47,14 +56,22 @@ public class menuController {
     public void LoadSinglePlayer(ActionEvent event) throws IOException {
         Parent singleplayerParent = FXMLLoader.load(getClass().getResource("singleplayer.fxml"));
         Scene singleplayerScene = new Scene(singleplayerParent);
-        Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
         window.setScene(singleplayerScene);
         window.show();
     }
 
+
+
+
     public void LoadMultiPlayer(ActionEvent event) throws IOException {
-    //movement.start();
+        Parent multiplayerParent = FXMLLoader.load(getClass().getResource("multiplayer.fxml"));
+        Scene multiplayerScene = new Scene(multiplayerParent);
+        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        window.setScene(multiplayerScene);
+        window.show();
     }
+
 
     public void ShowHighScores (ActionEvent event){
        HighScores.setVisible(true);
@@ -63,6 +80,9 @@ public class menuController {
        SinglePlayerButton.setDisable(true);
        MultiplayerButton.setDisable(true);
        HighScoresButton.setDisable(true);
+
+
+
     }
 
     public void Return (ActionEvent event){
@@ -72,6 +92,8 @@ public class menuController {
         SinglePlayerButton.setDisable(false);
         MultiplayerButton.setDisable(false);
         HighScoresButton.setDisable(false);
+
+
     }
 
     public void ExitPressed(){

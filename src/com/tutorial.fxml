@@ -12,13 +12,8 @@
                 <Image url="@../resources/tutorial1.png" />
             </image>
         </ImageView>
-      <ImageView fitHeight="203.0" fitWidth="268.0" layoutX="209.0" layoutY="392.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../resources/testgif.gif" />
-         </image>
-      </ImageView>
-        <Button fx:id="Next" layoutX="641.0" layoutY="625.0" mnemonicParsing="false" onAction="#NextClicked" prefHeight="52.0" prefWidth="118.0" text="Next" />
-        <Button fx:id="ReturnSecond" layoutX="818.0" layoutY="625.0" mnemonicParsing="false" onAction="#LoadMenu" prefHeight="52.0" prefWidth="118.0" text="Return" />
+        <Button fx:id="Next" layoutX="677.0" layoutY="700.0" mnemonicParsing="false" onAction="#NextClicked" opacity="0.0" prefHeight="46.0" prefWidth="135.0" text="Next" />
+        <Button fx:id="ReturnSecond" layoutX="828.0" layoutY="700.0" mnemonicParsing="false" onAction="#LoadMenu" opacity="0.0" prefHeight="46.0" prefWidth="167.0" text="Return" />
       <ImageView fx:id="Paused" fitHeight="768.0" fitWidth="1024.0" pickOnBounds="true" preserveRatio="true" visible="false">
          <image>
             <Image url="@../resources/paused.png" />
@@ -28,6 +23,6 @@
       <Button fx:id="Return" disable="true" layoutX="453.0" layoutY="392.0" mnemonicParsing="false" onAction="#LoadMenu" opacity="0.0" prefHeight="39.0" prefWidth="118.0" text="Return" />
       <Button fx:id="Resume" disable="true" layoutX="453.0" layoutY="353.0" mnemonicParsing="false" onAction="#ResumePressed" opacity="0.0" prefHeight="39.0" prefWidth="118.0" text="Resume" />
       <Button fx:id="Exit" disable="true" layoutX="453.0" layoutY="431.0" mnemonicParsing="false" onAction="#ExitPressed" opacity="0.0" prefHeight="39.0" prefWidth="118.0" text="Exit" />
-      <Button fx:id="Previous" disable="true" layoutX="477.0" layoutY="625.0" mnemonicParsing="false" onAction="#PreviousClicked" prefHeight="52.0" prefWidth="118.0" text="Previous" />
+      <Button fx:id="Previous" disable="true" layoutX="453.0" layoutY="700.0" mnemonicParsing="false" onAction="#PreviousClicked" opacity="0.0" prefHeight="46.0" prefWidth="202.0" text="Previous" />
     </children>
 </AnchorPane>

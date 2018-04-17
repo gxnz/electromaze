@@ -12,8 +12,8 @@
             <Image url="@../resources/story1.png" />
          </image>
       </ImageView>
-      <Button fx:id="Next" layoutX="641.0" layoutY="625.0" mnemonicParsing="false" onAction="#NextClicked" prefHeight="52.0" prefWidth="118.0" text="Next" />
-      <Button fx:id="ReturnSecond" layoutX="818.0" layoutY="625.0" mnemonicParsing="false" onAction="#LoadMenu" prefHeight="52.0" prefWidth="118.0" text="Return" />
+      <Button fx:id="Next" layoutX="677.0" layoutY="701.0" mnemonicParsing="false" onAction="#NextClicked" opacity="0.0" prefHeight="45.0" prefWidth="129.0" text="Next" />
+      <Button fx:id="ReturnSecond" layoutX="826.0" layoutY="701.0" mnemonicParsing="false" onAction="#LoadMenu" opacity="0.0" prefHeight="45.0" prefWidth="166.0" text="Return" />
       <ImageView fx:id="Paused" fitHeight="768.0" fitWidth="1024.0" pickOnBounds="true" preserveRatio="true" visible="false">
          <image>
             <Image url="@../resources/paused.png" />
@@ -23,6 +23,6 @@
       <Button fx:id="Return" disable="true" layoutX="453.0" layoutY="392.0" mnemonicParsing="false" onAction="#LoadMenu" opacity="0.0" prefHeight="39.0" prefWidth="118.0" text="Return" />
       <Button fx:id="Resume" disable="true" layoutX="453.0" layoutY="353.0" mnemonicParsing="false" onAction="#ResumePressed" opacity="0.0" prefHeight="39.0" prefWidth="118.0" text="Resume" />
       <Button fx:id="Exit" disable="true" layoutX="453.0" layoutY="431.0" mnemonicParsing="false" onAction="#ExitPressed" opacity="0.0" prefHeight="39.0" prefWidth="118.0" text="Exit" />
-      <Button fx:id="Previous" layoutX="475.0" layoutY="625.0" mnemonicParsing="false" onAction="#PreviousClicked" prefHeight="52.0" prefWidth="118.0" text="Previous" />
+      <Button fx:id="Previous" layoutX="453.0" layoutY="701.0" mnemonicParsing="false" onAction="#PreviousClicked" opacity="0.0" prefHeight="45.0" prefWidth="202.0" text="Previous" />
    </children>
 </AnchorPane>
