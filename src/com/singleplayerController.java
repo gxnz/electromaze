@@ -1,6 +1,5 @@
 package com;
 
-
 import com.levelone.Level1;
 import com.leveltwo.Level2;
 import com.levelthree.Level3;
@@ -14,7 +13,6 @@ import javafx.scene.layout.AnchorPane;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
-
 import java.io.IOException;
 
 public class singleplayerController extends IOException {
@@ -24,18 +22,8 @@ public class singleplayerController extends IOException {
     @FXML public Button Return;
 
     public void LoadLevel1(ActionEvent event) {
-
-        //String string[];
-        //Stage Stage2 = new Stage();
-
         Level1 Level1 = new Level1();
         Level1.start(new Stage());
-
-        //Stage2.setScene(new Scene(newPane));
-        //System.out.println("call");
-        //  } catch (Exception e){
-        //Main2 startUpTest = Main2.waitForStartUpTest();
-        //startUpTest.printSomething();
     }
 
     public void LoadLevel2(ActionEvent event) throws IOException {

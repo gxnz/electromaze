@@ -1,25 +1,16 @@
 package com;
 
-
-import com.levelone.Level1;
-import com.multione.Multi1;
-import com.multitwo.Multi2;
 import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import java.io.IOException;
-
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.image.ImageView;
 import javafx.scene.control.Button;
-import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
-
-
 
 public class menuController {
 
@@ -30,12 +21,7 @@ public class menuController {
     @FXML public Button TutorialButton;
     @FXML public Button SinglePlayerButton;
     @FXML public Button MultiplayerButton;
-    @FXML public Button HighScoresButton;
-
-    public void ButtonClicked(){
-        System.out.println("Button Clicked");
-    }
-
+    @FXML public Button GameCreditsButton;
 
     public void LoadStory(ActionEvent event) throws IOException {
         Parent storyParent = FXMLLoader.load(getClass().getResource("story.fxml"));
@@ -61,9 +47,6 @@ public class menuController {
         window.show();
     }
 
-
-
-
     public void LoadMultiPlayer(ActionEvent event) throws IOException {
         Parent multiplayerParent = FXMLLoader.load(getClass().getResource("multiplayer.fxml"));
         Scene multiplayerScene = new Scene(multiplayerParent);
@@ -72,17 +55,13 @@ public class menuController {
         window.show();
     }
 
-
-    public void ShowHighScores (ActionEvent event){
+    public void ShowGameCredits (ActionEvent event){
        HighScores.setVisible(true);
        StoryButton.setDisable(true);
        TutorialButton.setDisable(true);
        SinglePlayerButton.setDisable(true);
        MultiplayerButton.setDisable(true);
-       HighScoresButton.setDisable(true);
-
-
-
+       GameCreditsButton.setDisable(true);
     }
 
     public void Return (ActionEvent event){
@@ -91,9 +70,7 @@ public class menuController {
         TutorialButton.setDisable(false);
         SinglePlayerButton.setDisable(false);
         MultiplayerButton.setDisable(false);
-        HighScoresButton.setDisable(false);
-
-
+        GameCreditsButton.setDisable(false);
     }
 
     public void ExitPressed(){

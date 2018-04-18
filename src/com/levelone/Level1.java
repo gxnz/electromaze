@@ -238,9 +238,11 @@ public class Level1 extends Main {
     //Sets the timer for the game
     public void setTimer() {
 
-        timerLabel.setTextFill(Color.YELLOW);
-        timerLabel.setFont(new Font("Arial", 30));
+        timerLabel.setTextFill(Color.WHITE);
+        timerLabel.setFont(new Font("Arial Bold", 30));
         timerLabel.setText("Game begins in : "+ (timeSeconds-120));
+        timerLabel.setTranslateX(70);
+        timerLabel.setTranslateY(723);
 
         startTime = new Timeline(new KeyFrame(Duration.seconds(1), new EventHandler<ActionEvent>() {
             @Override
@@ -291,8 +293,8 @@ public class Level1 extends Main {
     //Displays scoreboard on the screen
     public void initializeScoreBoard() {
         score.setText("Score" + ": " + points);
-        score.setTextFill(Color.YELLOW);
-        score.setFont(new Font("Arial", 30));
+        score.setTextFill(Color.WHITE);
+        score.setFont(new Font("Arial Bold", 30));
         score.setPrefSize(200, 100);
         score.setTranslateX(800);
         score.setTranslateY(690);

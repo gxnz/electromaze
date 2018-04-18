@@ -1,56 +1,33 @@
 package com;
 
 import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
-import javafx.scene.input.KeyCode;
-import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.fxml.FXML;
 import javafx.scene.image.ImageView;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
-
-import java.awt.event.KeyAdapter;
-
-
-import java.awt.event.KeyListener;
 import java.io.IOException;
-
-
 
 public class storyController {
 
-
-
     private AnchorPane rootPane;
-
     @FXML public ImageView imgView;
-
     @FXML public Button Next;
     @FXML public Button Previous;
     @FXML public Button ReturnSecond;
-
     @FXML public ImageView Paused;
     @FXML public Button Pause;
     @FXML public Button Resume;
     @FXML public Button Return;
     @FXML public Button Exit;
-
     int currentimage = 1;
 
-
-
-
-
-
     public void NextClicked(){
-        //System.out.println("Click!");
-
         if (currentimage == 1) {
             imgView.setImage(new Image("resources/story2.png"));
             currentimage = 2;
@@ -84,9 +61,7 @@ public class storyController {
         }
     }
 
-
         public void EscapePressed(){
-        //System.out.println("Click!");
         Paused.setVisible(true);
         Pause.setDisable(true);
         Resume.setDisable(false);
@@ -99,7 +74,6 @@ public class storyController {
     }
 
     public void ResumePressed(){
-        //System.out.println("Click!");
         Paused.setVisible(false);
         Pause.setDisable(false);
         Resume.setDisable(true);
@@ -122,5 +96,4 @@ public class storyController {
     public void ExitPressed(){
         System.exit(0);
     }
-
 }

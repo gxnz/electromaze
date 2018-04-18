@@ -8,12 +8,9 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-
 import java.io.IOException;
 
 public class multiplayerController {
-
-
 
     public void LoadMulti1(ActionEvent event) throws IOException {
         Multi1 Multi1 = new Multi1();

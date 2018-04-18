@@ -14,15 +14,15 @@
       </ImageView>
       <ImageView fx:id="HighScores" fitHeight="768.0" fitWidth="1024.0" pickOnBounds="true" preserveRatio="true" visible="false">
          <image>
-            <Image url="@../resources/highscores.png" />
+            <Image url="@../resources/gamecredits.png" />
          </image>
       </ImageView>
        <Button fx:id="SinglePlayerButton" layoutX="37.0" layoutY="365.0" mnemonicParsing="false" onAction="#LoadSinglePlayer" opacity="0.0" prefHeight="58.0" prefWidth="472.0" text="Single Player" />
       <Button fx:id="MultiplayerButton" layoutX="37.0" layoutY="436.0" mnemonicParsing="false" onAction="#LoadMultiPlayer" opacity="0.0" prefHeight="58.0" prefWidth="436.0" text="Multiplayer" />
-      <Button fx:id="HighScoresButton" layoutX="41.0" layoutY="506.0" mnemonicParsing="false" onAction="#ShowHighScores" opacity="0.0" prefHeight="71.0" prefWidth="495.0" text="High Scores" />
+      <Button fx:id="GameCreditsButton" layoutX="36.0" layoutY="507.0" mnemonicParsing="false" onAction="#ShowGameCredits" opacity="0.0" prefHeight="71.0" prefWidth="487.0" text="Game Credits" />
       <Button fx:id="TutorialButton" layoutX="43.0" layoutY="291.0" mnemonicParsing="false" onAction="#LoadTutorial" opacity="0.0" prefHeight="58.0" prefWidth="319.0" text="Tutorial" />
       <Button fx:id="StoryButton" layoutX="43.0" layoutY="209.0" mnemonicParsing="false" onAction="#LoadStory" opacity="0.0" prefHeight="71.0" prefWidth="235.0" text="Story" />
-      <Button layoutX="561.0" layoutY="551.0" mnemonicParsing="false" onAction="#Return" opacity="0.0" prefHeight="40.0" prefWidth="135.0" text="Return" />
+      <Button layoutX="582.0" layoutY="643.0" mnemonicParsing="false" onAction="#Return" opacity="0.0" prefHeight="40.0" prefWidth="135.0" text="Return" />
       <Button layoutX="881.0" layoutY="30.0" mnemonicParsing="false" onAction="#ExitPressed" opacity="0.0" prefHeight="46.0" prefWidth="120.0" text="Quit" />
    </children>
 </AnchorPane>
