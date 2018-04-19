@@ -184,7 +184,7 @@ public class Level1 extends Main {
                             //Sound.PlaySound(Death);
                        // }
                         //clipplaying = 1;
-                        String musicFile = "resources/death.wav";
+                        String musicFile = "sound/death.wav";
                         Media sound = new Media (new File(musicFile).toURI().toString());
                         MediaPlayer mediaPlayer = new MediaPlayer(sound);
                         mediaPlayer.play();
