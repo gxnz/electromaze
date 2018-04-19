@@ -19,6 +19,8 @@ import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.stage.Stage;
 import javafx.util.Duration;
+import javafx.scene.media.Media;
+import javafx.scene.media.MediaPlayer;
 
 import java.io.File;
 
@@ -178,10 +180,16 @@ public class Level2 extends Main {
                             && !isGameOver && isCharacter1Alive) {
                         isCharacter1Alive = false;
                         isGameOver = true;
-                        if (clipplaying == 0){
-                            Sound.PlaySound(Death);
-                        }
-                        clipplaying = 1;
+                        //if (clipplaying == 0){
+                        //    Sound.PlaySound(Death);
+                        //}
+                        //clipplaying = 1;
+
+                        String musicFile = "sound/death.wav";
+                        Media sound = new Media (new File(musicFile).toURI().toString());
+                        MediaPlayer mediaPlayer = new MediaPlayer(sound);
+                        mediaPlayer.play();
+
                         startTime.stop();
                         stop();
                         showAlertBox("GAME OVER! YOUR SCORE :"+points);

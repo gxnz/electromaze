@@ -3,6 +3,8 @@ package com.levelone;
 import javafx.scene.Group;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
+import javafx.scene.media.Media;
+import javafx.scene.media.MediaPlayer;
 
 import java.io.File;
 
@@ -61,7 +63,11 @@ public class Maze extends Level1 {
     public void removeFlag(Group root, int row, int col) {
         map1[row][col] = 0;
         //map2[row][col] = 0;
-        Sound.PlaySound(Tower);
+        //Sound.PlaySound(Tower);
+        String musicFile = "sound/tower.wav";
+        Media sound = new Media (new File(musicFile).toURI().toString());
+        MediaPlayer mediaPlayer = new MediaPlayer(sound);
+        mediaPlayer.play();
         //Rectangle wall = buildSquareWall(row, col, Color.WHITE, 30);
         //root.getChildren().add(wall);
     }

@@ -320,7 +320,7 @@ public class Multi1 extends Main {
                         e.printStackTrace();
                     }
                     timer.stop();
-                    String musicFile = "resources/death.wav";
+                    String musicFile = "sound/death.wav";
                     Media sound = new Media (new File(musicFile).toURI().toString());
                     MediaPlayer mediaPlayer = new MediaPlayer(sound);
                     mediaPlayer.play();

@@ -6,6 +6,8 @@ import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyCode;
 import javafx.scene.layout.Pane;
 import javafx.scene.shape.Rectangle;
+import javafx.scene.media.Media;
+import javafx.scene.media.MediaPlayer;
 
 import java.io.File;
 
@@ -113,7 +115,11 @@ public class Character extends Multi1 {
 
         if (map[row][col] == 4) {
             if (clipplaying == 0){
-                Sound.PlaySound(Resistor);
+                //Sound.PlaySound(Resistor);
+                String musicFile = "sound/resistor.wav";
+                Media sound = new Media (new File(musicFile).toURI().toString());
+                MediaPlayer mediaPlayer = new MediaPlayer(sound);
+                mediaPlayer.play();
             }
             clipplaying = 1;
             return true;

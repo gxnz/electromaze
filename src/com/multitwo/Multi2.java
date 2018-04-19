@@ -19,6 +19,8 @@ import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.stage.Stage;
 import javafx.util.Duration;
+import javafx.scene.media.Media;
+import javafx.scene.media.MediaPlayer;
 
 import java.io.File;
 
@@ -199,7 +201,13 @@ public class Multi2 extends Main {
                             && !isGameOver && isCharacter1Alive) {
                             numberOfCharactersDied++;
                             isCharacter1Alive = false;
-                            Sound.PlaySound(Death);
+                            //Sound.PlaySound(Death);
+
+                        String musicFile = "sound/death.wav";
+                        Media sound = new Media (new File(musicFile).toURI().toString());
+                        MediaPlayer mediaPlayer = new MediaPlayer(sound);
+                        mediaPlayer.play();
+
                             root.getChildren().remove(myCharacter);
                         if(numberOfCharactersDied == 2){
                             showAlertBox("Congrats! You won the Game");
@@ -217,7 +225,11 @@ public class Multi2 extends Main {
                             numberOfCharactersDied++;
                             isCharacter2Alive = false;
 
-                            Sound.PlaySound(Death);
+                            //Sound.PlaySound(Death);
+                        String musicFile = "sound/death.wav";
+                        Media sound = new Media (new File(musicFile).toURI().toString());
+                        MediaPlayer mediaPlayer = new MediaPlayer(sound);
+                        mediaPlayer.play();
 
                             root.getChildren().remove(myCharacter2);
                         if(numberOfCharactersDied == 2){
