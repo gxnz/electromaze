@@ -48,8 +48,8 @@ public class Level1 extends Main {
     int noOftimesPIsPressed = 0;
     int currentlevel = 1;
     Pane myCharacter;
-    //File Death = new File("src/com/levelone/sound/death.wav");
-    //int clipplaying = 0;/
+    File Death = new File("src/com/levelone/sound/death.wav");
+    int clipplaying = 0;
 
     @Override
     public void start(Stage primaryStage) {
