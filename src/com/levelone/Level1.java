@@ -19,6 +19,8 @@ import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.stage.Stage;
 import javafx.util.Duration;
+import javafx.scene.media.Media;
+import javafx.scene.media.MediaPlayer;
 
 import java.io.File;
 
@@ -46,8 +48,8 @@ public class Level1 extends Main {
     int noOftimesPIsPressed = 0;
     int currentlevel = 1;
     Pane myCharacter;
-    File Death = new File("src/com/levelone/sound/death.wav");
-    int clipplaying = 0;
+    //File Death = new File("src/com/levelone/sound/death.wav");
+    //int clipplaying = 0;/
 
     @Override
     public void start(Stage primaryStage) {
@@ -178,10 +180,14 @@ public class Level1 extends Main {
                             && !isGameOver && isCharacter1Alive) {
                         isCharacter1Alive = false;
                         isGameOver = true;
-                        if (clipplaying == 0){
-                            Sound.PlaySound(Death);
-                        }
-                        clipplaying = 1;
+                        //f (clipplaying == 0){
+                            //Sound.PlaySound(Death);
+                       // }
+                        //clipplaying = 1;
+                        String musicFile = "resources/death.wav";
+                        Media sound = new Media (new File(musicFile).toURI().toString());
+                        MediaPlayer mediaPlayer = new MediaPlayer(sound);
+                        mediaPlayer.play();
                         startTime.stop();
                         stop();
                         showAlertBox("GAME OVER! YOUR SCORE :"+points);

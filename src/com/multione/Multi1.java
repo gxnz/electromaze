@@ -19,9 +19,12 @@ import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.stage.Stage;
 import javafx.util.Duration;
+import javafx.scene.media.Media;
+import javafx.scene.media.MediaPlayer;
 
 import java.io.File;
-
+//File Death = new File("src/com/levelone/sound/death.wav");
+//int clipplaying = 0;/
 
 public class Multi1 extends Main {
 
@@ -44,8 +47,8 @@ public class Multi1 extends Main {
     int noOftimesPIsPressed = 0;
     int currentlevel = 1;
     Pane myCharacter;
-    File Death = new File("src/com/multione/sound/death.wav");
-    int clipplaying = 0;
+    //File Death = new File("src/com/multione/sound/death.wav");
+    //int clipplaying = 0;
 
     @Override
     public void start(Stage primaryStage) {
@@ -208,9 +211,14 @@ public class Multi1 extends Main {
                         isCharacter1Alive = false;
                         isGameOver = true;
 
-                            Sound.PlaySound(Death);
+                            //Sound.PlaySound(Death);
+                            //clipplaying = 1;
+                        String musicFile = "resources/death.wav";
+                        Media sound = new Media (new File(musicFile).toURI().toString());
+                        MediaPlayer mediaPlayer = new MediaPlayer(sound);
+                        mediaPlayer.play();
 
-                        clipplaying = 1;
+
                         startTime.stop();
                         stop();
                         showAlertBox("GAME OVER! YOUR SCORE :"+points);
@@ -312,7 +320,10 @@ public class Multi1 extends Main {
                         e.printStackTrace();
                     }
                     timer.stop();
-                    Sound.PlaySound(Death);
+                    String musicFile = "resources/death.wav";
+                    Media sound = new Media (new File(musicFile).toURI().toString());
+                    MediaPlayer mediaPlayer = new MediaPlayer(sound);
+                    mediaPlayer.play();
                     showAlertBox("GAME OVER! YOUR SCORE :" + points);
                 }
             }
