@@ -1,12 +1,11 @@
 package com.multione;
 
-import javafx.scene.Group;
+
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.scene.input.KeyCode;
 import javafx.scene.layout.Pane;
 import javafx.scene.shape.Rectangle;
-import com.multione.Multi1;
+
 
 public class Overlay extends Multi1 {
 

@@ -7,9 +7,6 @@ import javafx.scene.layout.Pane;
 import javafx.scene.shape.Rectangle;
 
 import java.util.Random;
-import java.util.concurrent.CompletableFuture;
-
-import static java.lang.Thread.sleep;
 
 public class Enemy {
 

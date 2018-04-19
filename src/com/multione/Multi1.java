@@ -5,7 +5,6 @@ import javafx.animation.Animation;
 import javafx.animation.AnimationTimer;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
-import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.Group;
@@ -29,7 +28,6 @@ public class Multi1 extends Main {
 
     boolean moveUp = false, moveDown = false, moveRight = false, moveLeft = false;
     boolean enemyMoveUp = false, enemyMoveDown = false, enemyMoveRight = false, enemyMoveLeft = false;
-    boolean char2MoveUp = false, char2MoveDown = false, char2MoveRight = false, char2MoveLeft = false;
     int[][] map;
     Group root = new Group();
     boolean isTimerOn = false;
@@ -40,12 +38,8 @@ public class Multi1 extends Main {
     boolean isCountDownOver = false;
     boolean isGameOver = false;
     int points = 0;
-    int numberOfCharactersDied = 0;
     boolean isCharacter1Alive = true;
-    boolean isCharacter2Alive = true;
     int noOftimesPIsPressed = 0;
-    int currentlevel = 1;
-    Pane myCharacter;
     File Death = new File("src/com/multione/sound/death.wav");
     int clipplaying = 0;
 
@@ -67,9 +61,6 @@ public class Multi1 extends Main {
         initializeScoreBoard();
         totalFlags = maze.getTotalFlags(map);
 
-//  ====================================================================================================================
-//   MULTIPLAYER
-//
         //Bulds character and enemies onto current scene
         Character characterGen = new Character();
         Pane myCharacter = characterGen.getCharacter("com/multione/Resource/electrongreen.png", 60, 210, 25);
@@ -87,7 +78,6 @@ public class Multi1 extends Main {
 
         Enemy enemy3 = new Enemy();
         root.getChildren().addAll(enemy3.getEnemy("com/multione/Resource/evilelectron.png", 900, 510, 25));
-
 
         Scene scene = new Scene(root, 1024, 768);
 

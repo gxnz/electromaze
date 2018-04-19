@@ -8,8 +8,6 @@ import javafx.scene.shape.Rectangle;
 
 import java.util.Random;
 
-import static java.lang.Thread.sleep;
-
 public class Enemy extends Level3 {
 
     Pane enemy;

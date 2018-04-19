@@ -144,8 +144,6 @@ public class Character extends Level4 {
             maze.removeFlag(root,row,col);
 
             Towers towersGen = new Towers();
-            //Pane myTowers = towersGen.getTowers("com/levelfour/Resource/greensignalmap.PNG",col*30,row*30,30,30);
-            //root.getChildren().addAll(myTowers);
 
             return true;
         } else {

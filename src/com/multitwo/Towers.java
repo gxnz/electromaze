@@ -1,12 +1,9 @@
 package com.multitwo;
 
-import javafx.scene.Group;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.scene.input.KeyCode;
 import javafx.scene.layout.Pane;
 import javafx.scene.shape.Rectangle;
-import com.Main;
 
 public class Towers extends Multi2 {
 

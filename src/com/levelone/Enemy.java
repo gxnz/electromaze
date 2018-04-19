@@ -8,11 +8,10 @@ import javafx.scene.shape.Rectangle;
 
 import java.util.Random;
 
-import static java.lang.Thread.sleep;
-
 public class Enemy extends Level1 {
 
     Pane enemy;
+
     //Creates Enemy
     public Pane getEnemy(String src, int x, int y, int size) {
         Image image = new Image(src);

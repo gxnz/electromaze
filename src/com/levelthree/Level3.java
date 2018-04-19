@@ -1,7 +1,6 @@
 package com.levelthree;
 
 import com.Main;
-import com.singleplayerController;
 import javafx.animation.Animation;
 import javafx.animation.AnimationTimer;
 import javafx.animation.KeyFrame;
@@ -24,14 +23,9 @@ import javafx.scene.media.MediaPlayer;
 
 import java.io.File;
 
-import static javafx.application.Application.launch;
-
-
 public class Level3 extends Main {
 
     boolean moveUp = false, moveDown = false, moveRight = false, moveLeft = false;
-    boolean enemyMoveUp = false, enemyMoveDown = false, enemyMoveRight = false, enemyMoveLeft = false;
-    boolean char2MoveUp = false, char2MoveDown = false, char2MoveRight = false, char2MoveLeft = false;
     int[][] map;
     Group root = new Group();
     boolean isTimerOn = false;
@@ -42,12 +36,8 @@ public class Level3 extends Main {
     boolean isCountDownOver = false;
     boolean isGameOver = false;
     int points = 0;
-    int numberOfCharactersDied = 0;
     boolean isCharacter1Alive = true;
-    boolean isCharacter2Alive = true;
     int noOftimesPIsPressed = 0;
-    int currentlevel = 1;
-    Pane myCharacter;
     File Death = new File("src/com/levelthree/sound/death.wav");
     int clipplaying = 0;
 

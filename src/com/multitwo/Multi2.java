@@ -5,7 +5,6 @@ import javafx.animation.Animation;
 import javafx.animation.AnimationTimer;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
-import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.Group;
@@ -63,9 +62,6 @@ public class Multi2 extends Main {
         setTimer();
         initializeScoreBoard();
         totalFlags = maze.getTotalFlags(map);
-
-//        ==================================================================================================================
-//        MULTIPLAYER MODE2
 
         //Generate character and enemy onto current scene
         Character characterGen = new Character();

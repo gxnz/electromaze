@@ -14,6 +14,7 @@ import java.io.File;
 public class Character extends Level1 {
 
     Pane myCharacter;
+
     //Creates character
 
     File Resistor = new File("src/com/levelone/sound/resistor.wav");

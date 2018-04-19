@@ -143,8 +143,6 @@ public class Character extends Multi2 {
             maze.removeFlag(root,row,col);
 
             Towers towersGen = new Towers();
-            //Pane myTowers = towersGen.getTowers("File:src/sample/resource/greensignalmap.png",col*30,row*30,30,30);
-            //root.getChildren().addAll(myTowers);
 
             return true;
         } else {

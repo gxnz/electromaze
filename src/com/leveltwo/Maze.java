@@ -45,10 +45,7 @@ public class Maze extends Level2 {
     public int[][] getMap1() {
         return map1;
     }
-    //Return map 2
-    //public int[][] getMap2() {
-        //return map2;
-    //}
+
     //Builds a single wall for a specified size and colour
     public Rectangle buildSquareWall(int row, int col, Color color, int size) {
         Rectangle wall = new Rectangle();
@@ -62,14 +59,11 @@ public class Maze extends Level2 {
     //Removes the flag in the maze once character passes by
     public void removeFlag(Group root, int row, int col) {
         map1[row][col] = 0;
-        //map2[row][col] = 0;
         //Sound.PlaySound(Tower);
         String musicFile = "sound/tower.wav";
         Media sound = new Media (new File(musicFile).toURI().toString());
         MediaPlayer mediaPlayer = new MediaPlayer(sound);
         mediaPlayer.play();
-        //Rectangle wall = buildSquareWall(row, col, Color.WHITE, 30);
-        //root.getChildren().add(wall);
     }
     //Returns total number of flags inside the maze
     public int getTotalFlags(int[][] map) {
