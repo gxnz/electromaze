@@ -170,15 +170,13 @@ public class Level3 extends Main {
                             && !isGameOver && isCharacter1Alive) {
                         isCharacter1Alive = false;
                         isGameOver = true;
-                        //if (clipplaying == 0){
-                        //    Sound.PlaySound(Death);
-                        //}
-                        //clipplaying = 1;
 
-                        String musicFile = "sound/death.wav";
-                        Media sound = new Media (new File(musicFile).toURI().toString());
-                        MediaPlayer mediaPlayer = new MediaPlayer(sound);
-                        mediaPlayer.play();
+                        Sound.PlaySound(Death);
+
+                        //String musicFile = "sound/death.wav";
+                        //Media sound = new Media (new File(musicFile).toURI().toString());
+                        //MediaPlayer mediaPlayer = new MediaPlayer(sound);
+                        //mediaPlayer.play();
 
                         startTime.stop();
                         stop();

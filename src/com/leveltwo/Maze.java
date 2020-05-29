@@ -59,11 +59,12 @@ public class Maze extends Level2 {
     //Removes the flag in the maze once character passes by
     public void removeFlag(Group root, int row, int col) {
         map1[row][col] = 0;
-        //Sound.PlaySound(Tower);
-        String musicFile = "sound/tower.wav";
-        Media sound = new Media (new File(musicFile).toURI().toString());
-        MediaPlayer mediaPlayer = new MediaPlayer(sound);
-        mediaPlayer.play();
+
+        Sound.PlaySound(Tower);
+        //String musicFile = "sound/tower.wav";
+        //Media sound = new Media (new File(musicFile).toURI().toString());
+        //MediaPlayer mediaPlayer = new MediaPlayer(sound);
+        //mediaPlayer.play();
     }
     //Returns total number of flags inside the maze
     public int getTotalFlags(int[][] map) {

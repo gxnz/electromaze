@@ -115,11 +115,11 @@ public class Character extends Multi2 {
 
         if (map[row][col] == 4) {
             if (clipplaying == 0){
-                //Sound.PlaySound(Resistor);
-                String musicFile = "sound/resistor.wav";
-                Media sound = new Media (new File(musicFile).toURI().toString());
-                MediaPlayer mediaPlayer = new MediaPlayer(sound);
-                mediaPlayer.play();
+                Sound.PlaySound(Resistor);
+                //String musicFile = "sound/resistor.wav";
+                //Media sound = new Media (new File(musicFile).toURI().toString());
+                //MediaPlayer mediaPlayer = new MediaPlayer(sound);
+                //mediaPlayer.play();
             }
             clipplaying = 1;
             return true;

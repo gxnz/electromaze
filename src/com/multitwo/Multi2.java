@@ -197,18 +197,21 @@ public class Multi2 extends Main {
                             && !isGameOver && isCharacter1Alive) {
                             numberOfCharactersDied++;
                             isCharacter1Alive = false;
-                            //Sound.PlaySound(Death);
 
-                        String musicFile = "sound/death.wav";
-                        Media sound = new Media (new File(musicFile).toURI().toString());
-                        MediaPlayer mediaPlayer = new MediaPlayer(sound);
-                        mediaPlayer.play();
+                            Sound.PlaySound(Death);
+
+                            //String musicFile = "sound/death.wav";
+                            //Media sound = new Media (new File(musicFile).toURI().toString());
+                            //MediaPlayer mediaPlayer = new MediaPlayer(sound);
+                            //mediaPlayer.play();
 
                             root.getChildren().remove(myCharacter);
                         if(numberOfCharactersDied == 2){
                             showAlertBox("Congrats! You won the Game");
                             isGameOver = true;
-                            //Sound.PlaySound(Death);
+
+                            ////Sound.PlaySound(Death);
+
                             startTime.stop();
                             stop();
                         }
@@ -221,17 +224,17 @@ public class Multi2 extends Main {
                             numberOfCharactersDied++;
                             isCharacter2Alive = false;
 
-                            //Sound.PlaySound(Death);
-                        String musicFile = "sound/death.wav";
-                        Media sound = new Media (new File(musicFile).toURI().toString());
-                        MediaPlayer mediaPlayer = new MediaPlayer(sound);
-                        mediaPlayer.play();
+                            Sound.PlaySound(Death);
+                            //String musicFile = "sound/death.wav";
+                            //Media sound = new Media (new File(musicFile).toURI().toString());
+                            //MediaPlayer mediaPlayer = new MediaPlayer(sound);
+                            //mediaPlayer.play();
 
                             root.getChildren().remove(myCharacter2);
                         if(numberOfCharactersDied == 2){
                             isCharacter1Alive = false;
 
-                            //Sound.PlaySound(Death);
+                            ////Sound.PlaySound(Death);
 
                             isGameOver = true;
                             startTime.stop();

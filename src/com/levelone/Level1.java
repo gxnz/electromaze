@@ -170,14 +170,16 @@ public class Level1 extends Main {
                             && !isGameOver && isCharacter1Alive) {
                         isCharacter1Alive = false;
                         isGameOver = true;
-                        //f (clipplaying == 0){
-                            //Sound.PlaySound(Death);
-                       // }
+                        if (clipplaying == 0){
+                            Sound.PlaySound(Death);
+                        }
+
                         //clipplaying = 1;
-                        String musicFile = "sound/death.wav";
-                        Media sound = new Media (new File(musicFile).toURI().toString());
-                        MediaPlayer mediaPlayer = new MediaPlayer(sound);
-                        mediaPlayer.play();
+                        //String musicFile = "sound/death.wav";
+                        //Media sound = new Media (new File(musicFile).toURI().toString());
+                        //MediaPlayer mediaPlayer = new MediaPlayer(sound);
+                        //mediaPlayer.play();
+
                         startTime.stop();
                         stop();
                         showAlertBox("GAME OVER! YOUR SCORE :"+points);

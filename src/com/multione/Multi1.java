@@ -200,12 +200,12 @@ public class Multi1 extends Main {
                         isCharacter1Alive = false;
                         isGameOver = true;
 
-                            //Sound.PlaySound(Death);
-                            //clipplaying = 1;
-                        String musicFile = "sound/death.wav";
-                        Media sound = new Media (new File(musicFile).toURI().toString());
-                        MediaPlayer mediaPlayer = new MediaPlayer(sound);
-                        mediaPlayer.play();
+                        Sound.PlaySound(Death);
+
+                        //String musicFile = "sound/death.wav";
+                        //Media sound = new Media (new File(musicFile).toURI().toString());
+                        //MediaPlayer mediaPlayer = new MediaPlayer(sound);
+                        //mediaPlayer.play();
 
 
                         startTime.stop();
@@ -309,10 +309,15 @@ public class Multi1 extends Main {
                         e.printStackTrace();
                     }
                     timer.stop();
-                    String musicFile = "sound/death.wav";
-                    Media sound = new Media (new File(musicFile).toURI().toString());
-                    MediaPlayer mediaPlayer = new MediaPlayer(sound);
-                    mediaPlayer.play();
+
+                    Sound.PlaySound(Death);
+                    clipplaying = 1;
+
+                    //String musicFile = "sound/death.wav";
+                    //Media sound = new Media (new File(musicFile).toURI().toString());
+                    //MediaPlayer mediaPlayer = new MediaPlayer(sound);
+                    //mediaPlayer.play();
+
                     showAlertBox("GAME OVER! YOUR SCORE :" + points);
                 }
             }
